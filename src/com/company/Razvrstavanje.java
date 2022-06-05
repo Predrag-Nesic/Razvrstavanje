@@ -12,12 +12,13 @@ public class Razvrstavanje {
             System.out.println("Unesite " + (i + 1) + ". clan");
             niz[i] = Integer.parseInt(scan.nextLine());
         }
-
+        int p = 0;
+        int n = 0;
         for (int i = 0; i < niz.length; i++) {
             if(niz[i] > 0) {
-                poz[i] = niz[i];
+                poz[p++] = niz[i];
             } else if(niz[i] < 0) {
-                neg[i] = niz[i];
+                neg[n++] = niz[i];
             }
 
         }
