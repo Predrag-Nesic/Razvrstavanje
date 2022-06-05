@@ -14,13 +14,26 @@ public class Razvrstavanje {
         }
         int p = 0;
         int n = 0;
+
         for (int i = 0; i < niz.length; i++) {
             if(niz[i] > 0) {
                 poz[p++] = niz[i];
             } else if(niz[i] < 0) {
                 neg[n++] = niz[i];
             }
+        }
+        int[] pom = poz;
+        poz = new int[p];
 
+        for(int i = 0; i < poz.length; i++) {
+            poz[i] = pom[i];
+        }
+        
+        pom = neg;
+        neg = new int[n];
+
+        for(int i = 0; i < neg.length; i++) {
+            neg[i] = pom[i];
         }
         ispis(niz);
         System.out.println();
